@@ -57,6 +57,15 @@
                 "certidão de matrícula atualizada do imóvel"
             ],
             "resposta": "É um documento emitido pelo cartório que apresenta a situação atual do imóvel, incluindo proprietário, ônus, restrições e demais informações registradas."
+        },
+         {
+            "mensagens": [
+                "quais averbacoes posso fazer no cartorio?",
+                "quais averbacoes posso fazer no cartorio de registro de imoveis?",
+                "averbacoes cartorio",
+                "averbacoes cartorio de registro de imoveis"
+            ],
+            "resposta": "É possível averbar construções, demolições, casamentos, divórcios, alterações de nome e quitações de financiamento."
         }
     ]
 }
