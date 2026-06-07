@@ -1,0 +1,62 @@
+{
+    "conversas": [
+        {
+            "mensagens": [
+                "onde o cartorio está localizado?",
+                "onde fica o cartorio?",
+                "onde vocês funcionam?",
+                "onde vocês estão localizados?",
+                "onde fica?",
+                "endereço"
+                
+            ],
+            "resposta": "O Cartório de Registro de Imóveis fica localizado na Praça Estevão Santos, 109, Centro, Vitoria da Conquista - BA"
+        },
+        {
+            "mensagens": [
+                "qual é o horário de funcionamento?",
+                "que horas vocês ficam abertos?",
+                "que horas o cartorio fica aberto?",
+                "que horas o cartorio funciona?"
+            ],
+            "resposta": "O Cartório de Registro de Imóveis funciona das 08:00 às 14:00, de segunda a sexta-feira"
+        },
+        {
+            "mensagens": [
+                "como saber quem é o proprietario do imovel?",
+                "como descobrir quem é o proprietario do imovel?",
+                "como buscar um imovel no cartorio?",
+                "buscar imovel no cartorio"
+            ],
+            "resposta": "Para saber quem é o proprietário de um imóvel, é necessário consultar a matrícula do imóvel no Cartório de Registro de Imóveis. Você pode solicitar essa informação diretamente no cartório ou através dos serviços online disponíveis."
+        },
+        {
+            "mensagens": [
+                "como localizar um imovel no cartorio?",
+                "como buscar um imovel no cartorio?",
+                "buscar imovel no cartorio",
+                "localizar imovel no cartorio"
+            ],
+            "resposta": "Para localizar um imóvel no Cartório de Registro de Imóveis, é necessario uma busca por nome ou CPF do proprietário. Você pode fazer isso diretamente no cartório ou através dos serviços online disponíveis."
+        },
+        {
+            "mensagens": [
+                "como formalizar o registro de um imóvel financiado?",
+                "como registrar um imóvel financiado?",
+                "imovel financiado registro",
+                "registro de imovel financiado"
+            ],
+            "resposta": "O financiamento é registrado na matrícula do imóvel mediante apresentação do contrato ao cartório."
+        },
+        {
+            "mensagens": [
+                "o que é uma certidão de matrícula atualizada?",
+                "o que consta em uma certidão de matrícula atualizada?",
+                "certidão matrícula atualizada",
+                "certidão de matrícula atualizada",
+                "certidão de matrícula atualizada do imóvel"
+            ],
+            "resposta": "É um documento emitido pelo cartório que apresenta a situação atual do imóvel, incluindo proprietário, ônus, restrições e demais informações registradas."
+        }
+    ]
+}
