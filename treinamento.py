@@ -2,6 +2,8 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 import json
 
+from normalizador import normalizar
+
 NOME_ROBO = "RegisBot"
 
 import time
@@ -9,8 +11,7 @@ time.clock = time.time
 
 ARQUIVOS_CONVERSAS = [
     "conversas\\informacoes_basicas.json",
-    "conversas\\saudacoes.json",
-    "conversas\\sistemas_de_informacao.json"
+    "conversas\\saudacoes.json"
 ]
 
 def iniciar():
@@ -51,7 +52,7 @@ def treinar(treinador, conversas):
             
             for mensagem in mensagens:
                 print(f"Treinando com mensagem: {mensagem} e resposta: {resposta}")
-                treinador.train([mensagem.lower(), resposta])
+                treinador.train([normalizar(mensagem), resposta])
 
 if __name__ == "__main__":
     iniciado, robo, treinador = iniciar()

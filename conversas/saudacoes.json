@@ -1,7 +1,7 @@
 {
     "conversas": [
         {
-        "mensagens": ["oi", "olá", "oi, tudo bem?", "como vai?", "olá, como vai?", "ola como vai?", "ola"],
+        "mensagens": ["oi", "oi, tudo bem?", "como vai?", "olá, como vai?", "ola como vai?", "ola"],
             "resposta": "Olá, sou o RegisBot , robô de atendimento do Cartório de Registro de Imóveis. Estou aqui para ajudar com informações sobre matrícula de imóveis, certidões, registros, averbações, documentos necessários e outros serviços do cartório. Deseja saber alguma coisa?"
         },
         {

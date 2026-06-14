@@ -4,7 +4,7 @@ var server = http.Server(app)
 var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
 
-const URL_IFBABOT = "http://localhost:5000/resposta/";
+const URL_REGISBOT = "http://localhost:5000/resposta/";
 const CONFIANCA_MINIMA = 0.6;
 
 app.get('/', function (req, res) {
@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 getRespostaRobo = (mensagem) => {
   let dados = "";
 
-  http.get(URL_IFBABOT + mensagem, (resposta) => {
+  http.get(URL_REGISBOT + mensagem, (resposta) => {
     resposta.on("data", (pedaco) => {
       dados += pedaco;
     });

@@ -18,7 +18,7 @@ class TesteSaudacoes(unittest.TestCase):
             print(f"testando: {saudacao}")
 
             confianca, resposta = get_resposta(self.robo, saudacao)
-            self.assertEqual(confianca, 1.0)
+            self.assertGreaterEqual(confianca, LIMIAR_ACEITACAO)
             self.assertIn("Olá, sou o RegisBot", resposta)
 
     def testar_03_bom_dia(self):

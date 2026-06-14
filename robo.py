@@ -1,4 +1,14 @@
+import os
+import sys
+
+# Fixa o PYTHONHASHSEED para tornar a escolha de respostas do ChatterBot
+# reproduzível entre execuções (recomendado pela própria documentação).
+if __name__ == "__main__" and os.environ.get("PYTHONHASHSEED") != "0":
+    os.environ["PYTHONHASHSEED"] = "0"
+    os.execv(sys.executable, [sys.executable] + sys.argv)
+
 from chatterbot import ChatBot
+from normalizador import normalizar
 
 NOME_ROBO = "RegisBot"
 LIMIAR_ACEITACAO = 0.75
@@ -19,7 +29,7 @@ def iniciar():
     return iniciado, robo
 
 def get_resposta(robo, mensagem):
-    resposta = robo.get_response(mensagem.lower())
+    resposta = robo.get_response(normalizar(mensagem))
 
     return resposta.confidence, resposta.text
 

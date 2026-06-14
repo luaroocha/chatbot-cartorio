@@ -1,3 +1,12 @@
+import os
+import sys
+
+# Mesma ressalva do robo.py: o serviço precisa do PYTHONHASHSEED fixo para
+# o ChatterBot escolher consistentemente a resposta correta.
+if __name__ == "__main__" and os.environ.get("PYTHONHASHSEED") != "0":
+    os.environ["PYTHONHASHSEED"] = "0"
+    os.execv(sys.executable, [sys.executable] + sys.argv)
+
 from robo import *
 from flask import Flask, Response
 import json
@@ -13,16 +22,16 @@ def get_info():
         "nome": NOME_ROBO,
         "descricao": "Robô de atendimento do Cartório de Registro de Imóveis"
     })
-  
+
 @servico.get("/resposta/<string:mensagem>")
-def get_resposta(mensagem):
-    resposta = robo.get_response(mensagem)
+def responder(mensagem):
+    confianca, texto = get_resposta(robo, mensagem)
     resposta = {
-        "resposta": resposta.text,
-        "confianca": resposta.confidence
+        "resposta": texto,
+        "confianca": confianca
     }
-    
-    return Response (json.dumps(resposta), status=200, mimetype="application/json")
+
+    return Response(json.dumps(resposta), status=200, mimetype="application/json")
 
 
 if __name__ == "__main__":

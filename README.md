@@ -17,9 +17,10 @@ pip install -r requirements.txt
 
 ## Treinar o robô
 
-Gera o arquivo `db.sqlite3` com o conhecimento treinado a partir dos arquivos em `conversas/`:
+Gera o arquivo `db.sqlite3` com o conhecimento treinado a partir dos arquivos em `conversas/`. As mensagens são normalizadas (minúsculas e sem acentos, via `normalizador.py`) antes de treinar, para que o robô reconheça perguntas digitadas com ou sem acentuação:
 
 ```bash
+$env:PYTHONIOENCODING = "utf-8"
 python treinamento.py
 ```
 
@@ -38,6 +39,8 @@ python robo.py
 $env:PYTHONIOENCODING = "utf-8"
 python servico.py
 ```
+
+> `robo.py` e `servico.py` reiniciam automaticamente com `PYTHONHASHSEED=0`, garantindo respostas consistentes do ChatterBot.
 
 ### Interface web de chat (porta 3000)
 Com a API rodando em outro terminal:
