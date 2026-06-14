@@ -17,7 +17,10 @@
                 "qual é o horário de funcionamento?",
                 "que horas vocês ficam abertos?",
                 "que horas o cartorio fica aberto?",
-                "que horas o cartorio funciona?"
+                "que horas o cartorio funciona?",
+                "horario funcionamento",
+                "horário de funcionamento",
+                "funcionamento"
             ],
             "resposta": "O Cartório de Registro de Imóveis funciona das 08:00 às 14:00, de segunda a sexta-feira"
         },

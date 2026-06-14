@@ -2,7 +2,7 @@ from robo import *
 from flask import Flask, Response
 import json
 
-from treinamento import NOME_ROBO, iniciar
+from treinamento import NOME_ROBO
 
 iniciado, robo = iniciar()
 servico = Flask(NOME_ROBO)

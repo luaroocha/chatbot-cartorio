@@ -5,7 +5,7 @@
             "resposta": "Olá, sou o RegisBot , robô de atendimento do Cartório de Registro de Imóveis. Estou aqui para ajudar com informações sobre matrícula de imóveis, certidões, registros, averbações, documentos necessários e outros serviços do cartório. Deseja saber alguma coisa?"
         },
         {
-            "mensagens": ["Bom dia", "Oi, bom dia", "Olá, bom dia", "bom dia", "bomdia"],
+            "mensagens": ["Bom dia", "Oi, bom dia", "Olá, bom dia", "bomdia"],
             "resposta": "Bom dia, sou o RegisBot , robô de atendimento do Cartório de Registro de Imóveis. Estou aqui para ajudar com informações sobre matrícula de imóveis, certidões, registros, averbações, documentos necessários e outros serviços do cartório. Deseja saber alguma coisa?"
         },
         {
