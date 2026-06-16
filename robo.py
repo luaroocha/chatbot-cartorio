@@ -1,14 +1,3 @@
-import os
-import sys
-
-# O ChatterBot depende da ordem de iteração de sets/dicts para escolher a
-# melhor resposta entre respostas com confiança igual. Sem PYTHONHASHSEED
-# fixo, essa ordem muda a cada execução e o robô pode responder errado
-# (confiança 0) para perguntas digitadas com acentuação normal.
-if __name__ == "__main__" and os.environ.get("PYTHONHASHSEED") != "0":
-    os.environ["PYTHONHASHSEED"] = "0"
-    os.execv(sys.executable, [sys.executable] + sys.argv)
-
 from chatterbot import ChatBot
 
 NOME_ROBO = "RegisBot"
