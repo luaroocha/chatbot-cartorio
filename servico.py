@@ -1,8 +1,7 @@
 import os
 import sys
 
-# Mesma ressalva do robo.py: o serviço precisa do PYTHONHASHSEED fixo para
-# o ChatterBot escolher consistentemente a resposta correta.
+
 if __name__ == "__main__" and os.environ.get("PYTHONHASHSEED") != "0":
     os.environ["PYTHONHASHSEED"] = "0"
     os.execv(sys.executable, [sys.executable] + sys.argv)

@@ -1,4 +1,5 @@
 from chatterbot import ChatBot
+from normalizador import normalizar
 
 NOME_ROBO = "RegisBot"
 LIMIAR_ACEITACAO = 0.75
@@ -19,7 +20,7 @@ def iniciar():
     return iniciado, robo
 
 def get_resposta(robo, mensagem):
-    resposta = robo.get_response(mensagem.lower())
+    resposta = robo.get_response(normalizar(mensagem))
 
     return resposta.confidence, resposta.text
 
@@ -32,6 +33,5 @@ if __name__ == "__main__":
             if confianca >= LIMIAR_ACEITACAO:
                 print(f"🤖: {resposta} / confiança: {confianca}")
             else:
-                #enviar pergunta não respondida para o log
                 print("🤖: Desculpe, não entendi. Reformule, por favor!")
                 print(f"🤖: Nível de confiança: {confianca}")

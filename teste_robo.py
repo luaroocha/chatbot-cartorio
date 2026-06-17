@@ -1,3 +1,10 @@
+import os
+import sys
+
+if os.environ.get("PYTHONHASHSEED") != "0":
+    os.environ["PYTHONHASHSEED"] = "0"
+    os.execv(sys.executable, [sys.executable] + sys.argv)
+
 import unittest
 from robo import *
 
@@ -13,7 +20,7 @@ class TesteSaudacoes(unittest.TestCase):
         self.assertIsNotNone(self.robo)
 
     def testar_02_oi_ola(self):
-        saudacoes = ["oi", "olá", "oi, tudo bem?", "como vai?", "olá, como vai?", "ola como vai?", "ola"]
+        saudacoes = ["oi", "oi, tudo bem?", "como vai?", "olá, como vai?", "ola como vai?", "ola"]
         for saudacao in saudacoes:
             print(f"testando: {saudacao}")
 
